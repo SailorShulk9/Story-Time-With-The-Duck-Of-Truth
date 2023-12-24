@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Duck Duck Penguin</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="../Images/Story-Time-With-The-Duck-Of-Truth--No-Text2.png">
+	<link rel="manifest" href="../Images/Story-Time-With-The-Duck-Of-Truth--No-Text2.png">
+    </head>
+    <body class="background">
+    <button id="bird-generator">Duck Duck Penguin!</button>
+    <button id="reset">Reset</button>
+    <img id="truth" src="../images/The-Duck-Of-Truth!4-edi.png" style="display: none;" alt="The Duck of Truth. LUCKY!">
+
+    <img id="cookie" src="../images/Cookie-The-Penguin-Animation-edi.jpg" style="display: none;" alt="OH NO! It's Cookie the Penguin! YOU LOSE!">
+    <p id="game-over" style="display: none;">OH NO! You got Cookie! Game Over!</p>
+    <p id="round"></p>
+    <p id="high-score"></p>
+    <br><br>
+    <a href="../index.html"><button>Home</button></a>
+
+    <script>
+        document.getElementById("bird-generator").onclick = function() {
+            duckDuckCookie();
+        };
+        document.getElementById("reset").onclick = function() {
+            reset();
+        }
+        round = 1;
+        highScore = round;
+        chance = 5;
+
+        function duckDuckCookie() {
+            document.getElementById("truth").style.display = "none";
+            document.getElementById("cookie").style.display = "none";
+            number = 1 + Math.floor(Math.random() * 101);
+            
+            let roundText = "Round " + round;
+            let truthSource = "../images/The-Duck-Of-Truth!4-edi.png";
+            let cookieSource = "../images/Cookie-The-Penguin-Animation-edi.jpg"
+            let truth = document.createElement("img");
+            truth.src = truthSource;
+
+            let cookie = document.createElement("img");
+            cookie.src = cookieSource;
+
+            if (round > highScore) {
+                highScore = round;
+            }
+
+            let highScoreText = "High Score: " + highScore;
+
+            document.getElementById("round").innerHTML = roundText;
+            document.getElementById("high-score").innerHTML = highScoreText;
+
+            if (number <= chance) {
+                // cookie.style.display = "block";
+                document.getElementById("cookie").style.display = "block";
+                document.getElementById("game-over").style.display = "block";
+                document.getElementById("bird-generator").style.display = "none";
+            }
+            else {
+                // truth.style.display = "block";
+                document.getElementById("truth").style.display = "block";
+            }
+
+            if (chance < 95) {
+                chance += 5;
+            }
+            round+= 1;
+            console.log(chance);
+        }
+
+        function reset() {
+            chance = 5;
+            document.getElementById("truth").style.display = "none";
+            document.getElementById("cookie").style.display = "none";
+            document.getElementById("game-over").style.display = "none";
+            document.getElementById("bird-generator").style.display = "inline";
+            round = 1;
+        }
+
+    </script>
+
+<hr>
+	<footer id="footer" role="contentinfo" style="background-color: rgb(0, 0, 0);">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				
+				<!-- Left  -->
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<p>Story Time With the Duck of Truth!
+						<br>
+						Fun Stories with a Fun Duck!
+					</p>
+				</div>
+
+				<!-- Center -->
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+				<!--<div class="col-md-12 text-center">-->
+					<img src="../images/Story-Time-With-The-Duck-Of-Truth--No-Text2.png" height="70px" alt="Story Time With the Duck of Truth Logo">
+				</div>
+
+				<!-- Right -->
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<p>Site by Aidan Engle
+						<br>
+						Contact Me At:
+						<br>
+						24aengle@dc-tech.org
+					</p>
+					<hr>
+					<p>&copy; Elate Free HTML5. All Rights Reserved. <br>Created by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Images: <a href="http://pexels.com/" target="_blank">Pexels</a>, <a href="http://plmd.me/" target="_blank">plmd.me</a></p>
+                    <a href="../citation.html">Citations</a>
+				</div>
+				
+			</div>
+			
+		</div>
+	</footer>
+
+    </body>
+</html>

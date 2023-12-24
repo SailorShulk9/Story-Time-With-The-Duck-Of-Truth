@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Snakey the Snake!</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="../css/simple-line-icons.css">
+    <link rel="icon" href="../Images/Story-Time-With-The-Duck-Of-Truth--No-Text2.png">
+	<link rel="manifest" href="../Images/Story-Time-With-The-Duck-Of-Truth--No-Text2.png">
+</head>
+<body class="background5">
+<div class="low-spacing">
+<h1 class="low-spacing">Snakey the Snake!</h1>
+<p class="low-spacing">Use the arrow keys to move Snakey, but don't let him crash into himself!</p>
+<img src="../images/Snakey-the-Snake-mirror.png" alt="Snakey the Snake" class="left-snake">
+<canvas id="game" width="300" height="300"></canvas>
+<img src="../images/Snakey-the-Snake.png" alt="Snakey the Snake" class="right-snake">
+<table>
+    <tr>
+        <td>
+                <p><span id="score">Score: 0</span> &nbsp;&nbsp; <span id="highscore">High Score: 0</span></p>
+        </td>
+        <td>
+            <img src="../images/Snakey-the-Snake-mobile.png" alt="Snakey the Snake" class="mobile-snake">
+        </td>
+    </tr>
+
+</table>
+</div>
+<button id="move-up" class="icon-arrow-up snake-button"></button>
+<button id="move-down" class="icon-arrow-down snake-button"></button>
+<button id="move-left" class="icon-arrow-left snake-button"></button>
+<button id="move-right" class="icon-arrow-right snake-button"></button>
+<script src="js-snake.js"></script>
+<hr>
+<a href="../index.html" class="low-spacing"><button>Home</button></a>
+</body>
+</html>

@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Chewy";
+    src: url("../fonts/Chewy/Chewy-Regular.ttf");
+  }
+
+
+  .background {
+    color: #fff;
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #0A8754), color-stop(1, #aaaadd));
+    margin: 20px;
+  }
+  
+  .background button {
+      border-style: solid;
+      border-width: 4px;
+      border-color: #000;
+      margin-bottom: 20px;
+      background: none;
+  }
+
+
+body {
+    font-family: "Chewy", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #777777;
+    color: #7f7f7f;
+    background: #fff;
+    height: 100%;
+    position: relative;
+  }
+  
+  a {
+    color: #0A8754;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+  a:hover, a:active, a:focus {
+    color: #ececec;
+    outline: none;
+  }
+  
+  p {
+    margin-bottom: 1.5em;
+  }
+
+section {
+    text-align: center;
+}
+
+button {
+    font-family: "Chewy", Arial, sans-serif;
+    font-size: 20px;
+    background: #0A8754;
+    color: #fff;
+    padding: 20p;
+    border-radius: 15px;
+    border: none;
+    transition: 0.4s;
+    width: 150px;
+    height: 100px;
+}
+
+button:hover {
+    background: #333333;
+    color: #fff;
+    padding: 20px;
+}
+
+table {
+    margin: auto;
+    max-height: 200px;
+    width: auto;
+  }
+
+img {
+    height: 200px;
+    width: auto;
+    margin: 20px;
+}
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 20px auto;
+}
+
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    cursor: pointer;
+
+    line-height: 100px;
+    font-size: 60px;
+}
